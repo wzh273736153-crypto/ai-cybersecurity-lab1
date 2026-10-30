@@ -67,7 +67,7 @@ Scalers and label encoders are fit only on training data. Class weights are comp
 | [lab1/logbook_zehua.md](lab1/logbook_zehua.md) | Original hypotheses, results, failures, selection decisions and timing provenance |
 | [figures/](figures/) | Four plots extracted directly from saved notebook outputs |
 | [requirements.txt](requirements.txt) | Recorded top-level dependency versions |
-| [environment/](environment/) | Original dependency snapshot and environment notes |
+| [environment/](environment/) | Course dependency snapshot and Windows environment notes |
 | [docs/PUBLICATION_NOTES.md](docs/PUBLICATION_NOTES.md) | Snapshot changes, validation scope and provenance |
 | [docs/UPLOAD_GUIDE.zh-CN.md](docs/UPLOAD_GUIDE.zh-CN.md) | Chinese instructions for the first GitHub upload |
 
@@ -75,11 +75,13 @@ Scalers and label encoders are fit only on training data. Class weights are comp
 
 ### Obtain the data
 
-Use `dataset_lab_1.csv` from the course materials and copy it to **`lab1/dataset_lab_1.csv`**. The raw CSV is not bundled in this repository. Its expected SHA-256 is:
+Use `dataset_lab_1.csv` from the course materials and copy it to **`lab1/dataset_lab_1.csv`**. The raw CSV is not bundled in this repository. Its expected SHA-256 with LF line endings is:
 
 ```text
 16342d53b3a502ea7727d07bdf22d0f38e1abc5a23d01c42b0dd5770d6e5e125
 ```
+
+The original Windows copy uses CRLF line endings and has SHA-256 `d71ac2a6ddb4f8f0f5f0ad3cd67787b9dc8304d3d5a4c9143259ce6d45601fc9`. The LF and CRLF copies have identical CSV content.
 
 The repository excludes generated weights and per-epoch CSV files. A full top-to-bottom run generates them; the recovery section then reads the files created earlier in that run. To resume after a kernel restart, retain the locally generated checkpoints and histories and perform the necessary imports first.
 
